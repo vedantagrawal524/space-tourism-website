@@ -21,59 +21,79 @@
   </head>
   <body
     id="page"
-    class="xs:bg-[url('../assets/home/background-home-tablet.jpg')] relative flex min-h-screen flex-col bg-[url('../assets/home/background-home-mobile.jpg')] bg-cover bg-center bg-no-repeat text-base lg:bg-[url('../assets/home/background-home-desktop.jpg')]"
+    class="xs:bg-[url('../assets/home/background-home-tablet.jpg')] flex min-h-screen flex-col bg-[url('../assets/home/background-home-mobile.jpg')] bg-cover bg-center bg-no-repeat text-base lg:bg-[url('../assets/home/background-home-desktop.jpg')]"
   >
-    <header class="px-6 py-7">
-      <nav class="flex flex-row items-center justify-between">
+    <header class="xs:relative px-6 py-7">
+      <nav
+        class="xs:justify-normal flex flex-row items-center justify-between lg:relative"
+      >
         <img
           src="./assets/shared/logo.svg"
           alt="Logo"
-          class="logo h-auto w-10"
+          class="logo h-auto w-10 place-self-center self-center"
         />
 
         <div
-          class="pointer-events-none absolute top-1/2 left-20 z-10 hidden w-1/3 transform border-t border-white/50"
+          class="pointer-events-none absolute top-1/2 left-[5rem] hidden w-[90%] transform border-t-[1.5px] border-white/15 lg:inline-block"
         ></div>
 
         <button
           type="button"
-          class="menu-button cursor-pointer bg-[url('../assets/shared/icon-hamburger.svg')] bg-cover bg-center bg-no-repeat p-2.5"
+          class="menu-button xs:hidden cursor-pointer bg-[url('../assets/shared/icon-hamburger.svg')] bg-cover bg-center bg-no-repeat p-2.5"
         ></button>
 
         <section
           id="mobile-menu"
-          class="fixed top-0 right-0 z-20 flex h-full w-3/4 translate-x-[100%] flex-col scroll-smooth bg-white/5 px-6 py-7 backdrop-blur-xl transition-[translate] duration-400 ease-linear"
+          class="xs:absolute xs:translate-x-[0%] xs:flex-row xs:h-20 xs:items-center xs:justify-center xs:transition-none fixed top-0 right-0 z-20 flex h-full w-fit translate-x-[100%] flex-col scroll-smooth bg-white/5 px-8 py-7 backdrop-blur-xl transition-all duration-400 ease-linear lg:top-[-30%] lg:right-[-1.5rem] lg:h-16 lg:w-[40rem] lg:justify-start"
         >
+          <div
+            class="pointer-events-none absolute top-1/2 left-0 hidden w-6 transform border-t-[1.5px] border-white/8 lg:inline-block"
+          ></div>
+
           <button
             type="button"
-            class="menu-button mt-2 cursor-pointer place-self-center self-end justify-self-center bg-[url('../assets/shared/icon-close.svg')] bg-center bg-no-repeat p-2.5"
+            class="menu-button xs:hidden mt-2 cursor-pointer place-self-center self-end justify-self-center bg-[url('../assets/shared/icon-close.svg')] bg-center bg-no-repeat p-2.5"
           ></button>
 
           <ul
-            class="font-barlow-condensed mt-20 flex w-full flex-col gap-5 text-[1.05rem] tracking-widest text-gray-50 uppercase"
+            class="font-barlow-condensed xs:flex-row xs:mt-0 xs:text-[0.8rem] xs:tracking-[0.15rem] xs:gap-8 mt-20 flex w-full flex-col gap-5 text-[1.05rem] tracking-widest text-gray-300 uppercase lg:ml-12 lg:gap-10 lg:text-[0.83rem]"
           >
-            <li class="nav-link active relative cursor-pointer font-[400]">
+            <li
+              class="nav-link active xs:font-[500] relative cursor-pointer font-[500]"
+            >
               <a href="#" class="flex flex-row items-center gap-2"
-                ><span class="font-[500]">00</span>Home</a
+                ><span
+                  class="xs:hidden font-[600] tracking-widest text-gray-50 lg:inline-block lg:text-[0.9rem]"
+                  >00</span
+                >Home</a
               >
             </li>
-            <li class="nav-link relative cursor-pointer font-[400]">
+            <li class="nav-link relative cursor-pointer font-[500]">
               <a
                 class="flex flex-row items-center gap-2"
                 href="./destination.html"
-                ><span class="font-[500]">01</span>Destination</a
+                ><span
+                  class="xs:hidden font-[600] tracking-widest text-gray-50 lg:inline-block lg:text-[0.9rem]"
+                  >01</span
+                >Destination</a
               >
             </li>
-            <li class="nav-link relative cursor-pointer font-[400]">
+            <li class="nav-link relative cursor-pointer font-[500]">
               <a class="flex flex-row items-center gap-2" href="./crew.html"
-                ><span class="font-[500]">02</span>Crew</a
+                ><span
+                  class="xs:hidden font-[600] tracking-widest text-gray-50 lg:inline-block lg:text-[0.9rem]"
+                  >02</span
+                >Crew</a
               >
             </li>
-            <li class="nav-link relative cursor-pointer font-[400]">
+            <li class="nav-link relative cursor-pointer font-[500]">
               <a
                 class="flex flex-row items-center gap-2"
                 href="./technology.html"
-                ><span class="font-[500]">03</span>Technology</a
+                ><span
+                  class="xs:hidden font-[600] tracking-widest text-gray-50 lg:inline-block lg:text-[0.9rem]"
+                  >03</span
+                >Technology</a
               >
             </li>
           </ul>
@@ -81,21 +101,23 @@
       </nav>
     </header>
 
-    <main class="">
+    <main class="flex items-center justify-center lg:self-center">
       <section
-        class="flex flex-col items-center justify-between gap-16 px-6 py-7 pb-9"
+        class="xs:mt-10 flex flex-col items-center justify-between gap-16 px-6 py-7 pb-9 lg:mt-[20%] lg:flex-row lg:justify-around lg:gap-36"
       >
-        <div class="max-w-[365px] text-center">
+        <div class="max-w-[355px] text-center lg:max-w-[314px] lg:text-left">
           <p
-            class="font-barlow-condensed text-[1.05rem] tracking-[0.13rem] text-gray-400 uppercase"
+            class="font-barlow-condensed text-[0.9rem] tracking-[0.13rem] text-gray-400 uppercase lg:ml-0.5 lg:text-[1.1rem] lg:font-[500]"
           >
             So, you want to travel to
           </p>
-          <h1 class="font-bellefair mt-2 text-[5rem] text-gray-50 uppercase">
+          <h1
+            class="font-bellefair xs:text-[6.5rem] xs:leading-24 mt-6 text-[5rem] leading-20 text-gray-50 uppercase"
+          >
             Space
           </h1>
           <p
-            class="font-barlow mt-0.5 text-[0.94rem] font-[400] tracking-[0.02] text-gray-400"
+            class="font-barlow mt-5 text-[0.8rem] font-[400] tracking-[0.02] text-gray-400"
           >
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.

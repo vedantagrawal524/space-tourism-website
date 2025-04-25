@@ -16,7 +16,7 @@
   }
 
   .nav-link.active {
-    @apply after:absolute after:top-0 after:-right-6 after:h-full after:w-[4px] after:bg-white;
+    @apply xs:after:top-[2.9rem] xs:after:right-0 xs:after:w-full xs:after:h-[3.5px] xs:after:rounded-tr-full xs:after:rounded-bl-none after:absolute after:top-0 after:-right-8 after:h-full after:w-[4px] after:rounded-tl-full after:rounded-bl-full after:bg-white lg:after:top-[2.4rem];
   }
 
   #mobile-menu.active {
