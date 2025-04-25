@@ -9,3 +9,17 @@
 
   --breakpoint-xs: 580px;
 }
+
+@layer components {
+  #page.deactive {
+    @apply overflow-hidden;
+  }
+
+  .nav-link.active {
+    @apply after:absolute after:top-0 after:-right-6 after:h-full after:w-[4px] after:bg-white;
+  }
+
+  #mobile-menu.active {
+    @apply translate-x-[0%]!;
+  }
+}
