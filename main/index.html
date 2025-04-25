@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,11 +19,48 @@
     <script src="./js/data.js" defer></script>
   </head>
   <body
-    class="text-lg bg-[url('../assets/home/background-home-mobile.jpg')] md:bg-[url('../assets/home/background-home-tablet.jpg')] lg:bg-[url('../assets/home/background-home-desktop.jpg')] bg-no-repeat bg-cover bg-center min-h-screen text-base"
+    class="xs:bg-[url('../assets/home/background-home-tablet.jpg')] flex min-h-screen flex-col bg-[url('../assets/home/background-home-mobile.jpg')] bg-cover bg-center bg-no-repeat p-6 text-base lg:bg-[url('../assets/home/background-home-desktop.jpg')]"
   >
-    00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to Space
-    Let’s face it; if you want to go to space, you might as well genuinely go to
-    outer space and not hover kind of on the edge of it. Well sit back, and
-    relax because we’ll give you a truly out of this world experience! Explore
+    <header class="flex flex-row items-center justify-between">
+      <img src="./assets/shared/logo.svg" alt="Logo" class="logo h-auto w-10" />
+      <button
+        class="hamburger-button cursor-pointer bg-[url('../assets/shared/icon-hamburger.svg')] bg-cover bg-center bg-no-repeat p-2.5"
+      ></button>
+
+      <div class="hidden">00 Home 01 Destination 02 Crew 03 Technology</div>
+    </header>
+
+    <main>
+      <section class="flex flex-col items-center justify-between gap-16 p-12">
+        <div class="max-w-[390px] text-center">
+          <p
+            class="font-barlow-condensed text-[1.05rem] tracking-[0.13rem] text-gray-400 uppercase"
+          >
+            So, you want to travel to
+          </p>
+          <h1 class="font-bellefair mt-2 text-[5rem] text-gray-50 uppercase">
+            Space
+          </h1>
+          <p
+            class="font-barlow mt-0.5 font-[400] tracking-normal text-gray-400"
+          >
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </div>
+
+        <div
+          class="flex items-center justify-between rounded-full hover:opacity-50"
+        >
+          <a
+            href="#"
+            class="font-bellefair a after relative mx-auto flex h-40 w-40 items-center justify-center rounded-full bg-white text-[1.5rem] font-[500] text-gray-950 uppercase transition-all duration-200 ease-in-out after:absolute after:h-60 after:w-60 after:rounded-full after:bg-white/10 after:opacity-0 after:transition-opacity after:duration-200 after:ease-in-out hover:after:opacity-100"
+            >Explore</a
+          >
+        </div>
+      </section>
+    </main>
   </body>
 </html>

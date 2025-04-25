@@ -6,4 +6,6 @@
   --font-bellefair: "Bellefair", serif;
   --font-barlow: "Barlow", sans-serif;
   --font-barlow-condensed: "Barlow Condensed", sans-serif;
+
+  --breakpoint-xs: 580px;
 }
