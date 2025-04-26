@@ -38,4 +38,14 @@
   .technology-item.active {
     @apply bg-gray-50! text-gray-950!;
   }
+
+  @media screen and (min-width: 1024px) {
+    .nav-link {
+      @apply after:bg-white/50 hover:after:absolute hover:after:top-[2.9rem] hover:after:right-0 hover:after:h-[3.5px] hover:after:w-full hover:after:rounded-tl-full hover:after:rounded-tr-full;
+    }
+
+    .destination-item {
+      @apply after:bg-white/50 hover:after:absolute hover:after:top-[1.9rem] hover:after:right-0 hover:after:h-[3.5px] hover:after:w-full hover:after:rounded-tl-full hover:after:rounded-tr-full;
+    }
+  }
 }
