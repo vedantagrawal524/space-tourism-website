@@ -40,7 +40,14 @@ window.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((navLink) => {
     const link = navLink.querySelector("a");
     const href = link.getAttribute("href").replace("./", "");
-    if (currentPage === href) {
+
+    // Default Home page
+    if (
+      (currentPage === "" || currentPage === "index.html") &&
+      href === "index.html"
+    ) {
+      navLink.classList.add("active");
+    } else if (currentPage === href) {
       navLink.classList.add("active");
     } else {
       navLink.classList.remove("active");
