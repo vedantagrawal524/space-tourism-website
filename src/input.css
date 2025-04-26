@@ -2,6 +2,10 @@
 
 @import "tailwindcss";
 
+* {
+  transition: all 0.3s linear;
+}
+
 @theme {
   --font-bellefair: "Bellefair", serif;
   --font-barlow: "Barlow", sans-serif;
@@ -29,5 +33,9 @@
 
   .crew-item.active {
     @apply bg-gray-50!;
+  }
+
+  .technology-item.active {
+    @apply bg-gray-50! text-gray-950!;
   }
 }

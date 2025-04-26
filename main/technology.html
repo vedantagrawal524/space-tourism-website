@@ -106,88 +106,90 @@
         class="xs:mt-6 flex h-full flex-col gap-14 px-8 py-7 pb-16 lg:mt-0 lg:gap-16 lg:px-14"
       >
         <h1
-          class="font-barlow-condensed ] xs:self-start xs:text-[1.5rem] flex flex-row items-center justify-center gap-3 text-[1.25rem] tracking-[0.14rem] text-gray-300 uppercase lg:ml-6 lg:font-[500]"
+          class="font-barlow-condensed ] xs:self-start xs:text-[1.5rem] flex flex-row items-center justify-center gap-3 text-[1.25rem] tracking-[0.14rem] text-gray-300 uppercase lg:ml-[4.1rem] lg:font-[500]"
         >
-          <span class="tracking-widest text-gray-400/60">02</span>
-          Pick your Crew
+          <span class="tracking-widest text-gray-400/60">03</span>
+          Space launch 101
         </h1>
 
         <div
-          class="flex flex-col items-center justify-center gap-12 lg:flex-row lg:gap-40 xl:gap-60"
+          class="flex flex-col items-center justify-center gap-12 lg:flex-row lg:gap-18 xl:gap-40"
         >
-          <img
-            id="crew-img"
-            src="./assets/crew/image-douglas-hurley.webp"
-            alt="Moon"
-            class="xs:w-[20rem] h-auto w-[15rem] lg:order-1 lg:w-[22rem] xl:w-[24rem]"
-          />
+          <picture class="lg:order-1">
+            <source
+              srcset="./assets/technology/image-launch-vehicle-landscape.jpg"
+              media="(max-width: 1023px)"
+            />
+            <img
+              id="technology-img"
+              src="./assets/technology/image-launch-vehicle-portrait.jpg"
+              alt="Moon"
+              class="h-auto w-full place-self-center self-center justify-self-center lg:w-[17rem] xl:w-[24rem]"
+            />
+          </picture>
           <div
-            id="crews"
-            class="flex max-w-[355px] flex-col text-center lg:max-w-[360px] lg:text-left xl:max-w-[350px]"
+            id="technologys"
+            class="flex max-w-[355px] flex-col text-center lg:max-w-[450px] lg:flex-row lg:gap-10 lg:text-left xl:max-w-[440px]"
           >
             <ul
-              id="crew-list"
-              class="flex flex-row gap-6 place-self-center lg:order-1 lg:mt-24 lg:ml-1 lg:place-self-start"
+              id="technology-list"
+              class="font-bellefair flex flex-row gap-6 place-self-center text-[1.1rem] font-[600] lg:flex-col lg:place-self-start"
             >
               <li>
                 <button
                   type="button"
                   value="0"
-                  class="crew-item active h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
-                ></button>
+                  class="technology-item active flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border border-gray-600 bg-transparent p-6 text-gray-50 lg:p-7"
+                >
+                  1
+                </button>
               </li>
               <li>
                 <button
                   type="button"
-                  class="crew-item h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
+                  class="technology-item flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border border-gray-600 bg-transparent p-6 text-gray-50 lg:p-7"
                   value="1"
-                ></button>
+                >
+                  2
+                </button>
               </li>
               <li>
                 <button
                   type="button"
-                  class="crew-item h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
+                  class="technology-item flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border border-gray-600 bg-transparent p-6 text-gray-50 lg:p-7"
                   value="2"
-                ></button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="crew-item h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
-                  value="3"
-                ></button>
+                >
+                  3
+                </button>
               </li>
             </ul>
-            <div id="crew-info">
+
+            <div id="technology-info">
               <h1
-                id="crew-position"
-                class="font-bellefair mt-10 text-[1.6rem] text-gray-400/70 uppercase lg:mt-0"
+                class="font-bellefair mt-10 text-[1.1rem] text-gray-400/70 uppercase lg:mt-0 lg:text-[0.9rem]"
               >
-                Commander
+                The terminology...
               </h1>
               <h2
-                id="crew-name"
-                class="font-bellefair xs:text-[2.15rem] mt-1 text-[1.8rem] text-gray-50 uppercase lg:text-[2.5rem]"
+                id="technology-name"
+                class="font-bellefair xs:text-[2.15rem] mt-3 text-[1.8rem] leading-8 text-gray-50 uppercase lg:text-[2.25rem] xl:text-[2.5rem]"
               >
-                Douglas Hurley
+                Launch vehicle
               </h2>
               <p
-                id="crew-description"
-                class="font-barlow mt-4 text-[0.8rem] font-[400] tracking-[0.02] text-gray-400 lg:text-[0.82rem] xl:text-[0.9rem] xl:leading-6"
+                id="technology-description"
+                class="font-barlow mt-4 text-[0.8rem] leading-5 font-[400] tracking-[0.02] text-gray-400 lg:text-[0.82rem] xl:text-[0.9rem] xl:leading-6"
               >
-                Douglas Gerald Hurley is an American engineer, former Marine
-                Corps pilot and former NASA astronaut. He launched into space
-                for the third time as commander of Crew Dragon Demo-2.
+                A launch vehicle or carrier rocket is a rocket-propelled vehicle
+                used to carry a payload from Earth's surface to space, usually
+                to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+                powerful in operation. Standing 150 metres tall, it's quite an
+                awe-inspiring sight on the launch pad!
               </p>
             </div>
           </div>
         </div>
       </section>
-      03 Space launch 101 1 2 3 The terminology... Launch vehicle A launch
-      vehicle or carrier rocket is a rocket-propelled vehicle used to carry a
-      payload from Earth's surface to space, usually to Earth orbit or beyond.
-      Our WEB-X carrier rocket is the most powerful in operation. Standing 150
-      metres tall, it's quite an awe-inspiring sight on the launch pad!
     </main>
   </body>
 </html>
