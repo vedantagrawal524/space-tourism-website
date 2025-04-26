@@ -16,7 +16,7 @@
       href="./assets/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/data.js" defer></script>
+    <script type="module" src="./js/destination.js"></script>
     <script src="./js/mobile-menu.js" defer></script>
   </head>
   <body
@@ -106,7 +106,7 @@
         class="xs:mt-6 flex flex-col gap-14 px-8 py-7 pb-16 lg:mt-0 lg:gap-16 lg:px-14"
       >
         <h1
-          class="font-barlow-condensed ] xs:self-start xs:text-[1.5rem] flex flex-row items-center justify-center gap-3 text-[1.25rem] tracking-[0.14rem] text-gray-300 uppercase lg:ml-[4.1rem] lg:font-[500]"
+          class="font-barlow-condensed xs:self-start xs:text-[1.5rem] flex flex-row items-center justify-center gap-3 text-[1.25rem] tracking-[0.14rem] text-gray-300 uppercase lg:ml-[4.1rem] lg:font-[500]"
         >
           <span class="tracking-widest text-gray-400/60">01</span>
           Pick your destination
@@ -115,12 +115,19 @@
         <div
           class="flex flex-col items-center justify-center gap-12 lg:flex-row lg:gap-40 xl:gap-60"
         >
-          <img
-            id="destination-img"
-            src="./assets/destination/image-moon.webp"
-            alt="Moon"
-            class="xs:w-[20rem] h-auto w-[15rem] lg:w-[22rem] xl:w-[24rem]"
-          />
+          <picture>
+            <source
+              id="destination-img-webp"
+              srcset="./assets/destination/image-moon.webp"
+              media="(min-width: 1024px)"
+            />
+            <img
+              id="destination-img-png"
+              src="./assets/destination/image-moon.png"
+              alt="Moon"
+              class="xs:w-[20rem] h-auto w-[15rem] lg:w-[22rem] xl:w-[24rem]"
+            />
+          </picture>
           <div
             id="destinations"
             class="max-w-[355px] text-center lg:max-w-[314px] lg:text-left xl:max-w-[350px]"
@@ -132,7 +139,7 @@
               <li>
                 <button
                   type="button"
-                  value="Moon"
+                  value="moon"
                   class="destination-item active relative h-fit w-fit cursor-pointer uppercase"
                 >
                   Moon
@@ -142,7 +149,7 @@
                 <button
                   type="button"
                   class="destination-item relative h-fit w-fit cursor-pointer uppercase"
-                  value="Mars"
+                  value="mars"
                 >
                   Mars
                 </button>
@@ -151,7 +158,7 @@
                 <button
                   type="button"
                   class="destination-item relative h-fit w-fit cursor-pointer uppercase"
-                  value="Europa"
+                  value="europa"
                 >
                   Europa
                 </button>
@@ -160,7 +167,7 @@
                 <button
                   type="button"
                   class="destination-item relative h-fit w-fit cursor-pointer uppercase"
-                  value="Titan"
+                  value="titan"
                 >
                   Titan
                 </button>

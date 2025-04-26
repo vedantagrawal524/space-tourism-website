@@ -16,7 +16,7 @@
       href="./assets/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/data.js" defer></script>
+    <script type="module" src="./js/crew.js"></script>
     <script src="./js/mobile-menu.js" defer></script>
   </head>
   <body
@@ -115,24 +115,34 @@
         <div
           class="flex flex-col items-center justify-center gap-12 lg:flex-row lg:gap-40 xl:gap-60"
         >
-          <img
-            id="crew-img"
-            src="./assets/crew/image-douglas-hurley.webp"
-            alt="Moon"
-            class="xs:w-[20rem] h-auto w-[14rem] place-self-center self-center justify-self-center lg:order-1 lg:w-[17rem] xl:w-[24rem]"
-          />
+          <picture
+            class="place-self-center self-center justify-self-center lg:order-1"
+          >
+            <source
+              id="crew-img-webp"
+              srcset="./assets/crew/image-douglas-hurley.webp"
+              media="(min-width: 1024px)"
+            />
+            <img
+              id="crew-img-png"
+              src="./assets/crew/image-douglas-hurley.png"
+              alt="Douglas Hurley"
+              class="xs:w-[20rem] h-auto w-[14rem] lg:mt-[-5rem] lg:w-[17rem] xl:w-[24rem]"
+            />
+          </picture>
+
           <div
             id="crews"
             class="flex max-w-[355px] flex-col text-center lg:max-w-[360px] lg:text-left"
           >
             <ul
               id="crew-list"
-              class="flex flex-row gap-6 place-self-center lg:order-1 lg:mt-24 lg:ml-1 lg:place-self-start"
+              class="flex flex-row gap-6 place-self-center lg:order-1 lg:mt-20 lg:ml-1 lg:place-self-start"
             >
               <li>
                 <button
                   type="button"
-                  value="0"
+                  value="douglashurley"
                   class="crew-item active h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
                 ></button>
               </li>
@@ -140,21 +150,21 @@
                 <button
                   type="button"
                   class="crew-item h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
-                  value="1"
+                  value="markshuttleworth"
                 ></button>
               </li>
               <li>
                 <button
                   type="button"
                   class="crew-item h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
-                  value="2"
+                  value="victorglover"
                 ></button>
               </li>
               <li>
                 <button
                   type="button"
                   class="crew-item h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
-                  value="3"
+                  value="anoushehansari"
                 ></button>
               </li>
             </ul>
@@ -167,7 +177,7 @@
               </h1>
               <h2
                 id="crew-name"
-                class="font-bellefair xs:text-[2.15rem] mt-1 text-[1.8rem] text-gray-50 uppercase lg:text-[2.5rem]"
+                class="font-bellefair xs:text-[2.15rem] mt-1 text-[1.8rem] leading-8 text-gray-50 uppercase lg:text-[2.5rem] lg:leading-10"
               >
                 Douglas Hurley
               </h2>

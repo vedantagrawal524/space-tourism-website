@@ -16,7 +16,7 @@
       href="./assets/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/data.js" defer></script>
+    <script type="module" src="./js/technology.js"></script>
     <script src="./js/mobile-menu.js" defer></script>
   </head>
   <body
@@ -117,14 +117,15 @@
         >
           <picture class="lg:order-1">
             <source
-              srcset="./assets/technology/image-launch-vehicle-landscape.jpg"
-              media="(max-width: 1023px)"
+              id="technology-img-portrait"
+              srcset="./assets/technology/image-launch-vehicle-portrait.jpg"
+              media="(min-width: 1024px)"
             />
             <img
-              id="technology-img"
-              src="./assets/technology/image-launch-vehicle-portrait.jpg"
+              id="technology-img-landscape"
+              src="./assets/technology/image-launch-vehicle-landscape.jpg"
               alt="Moon"
-              class="h-auto w-full place-self-center self-center justify-self-center lg:w-[17rem] xl:w-[24rem]"
+              class="h-auto w-full place-self-center self-center justify-self-center lg:mt-[-2rem] lg:w-[17rem] xl:w-[24rem]"
             />
           </picture>
           <div
@@ -138,7 +139,7 @@
               <li>
                 <button
                   type="button"
-                  value="0"
+                  value="launchvehicle"
                   class="technology-item active flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border border-gray-600 bg-transparent p-6 text-gray-50 lg:p-7"
                 >
                   1
@@ -148,7 +149,7 @@
                 <button
                   type="button"
                   class="technology-item flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border border-gray-600 bg-transparent p-6 text-gray-50 lg:p-7"
-                  value="1"
+                  value="spaceport"
                 >
                   2
                 </button>
@@ -157,7 +158,7 @@
                 <button
                   type="button"
                   class="technology-item flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border border-gray-600 bg-transparent p-6 text-gray-50 lg:p-7"
-                  value="2"
+                  value="spacecapsule"
                 >
                   3
                 </button>
