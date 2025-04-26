@@ -15,9 +15,9 @@ const destinationImgWebp = document.getElementById("destination-img-webp");
 
 let destinationDataCache = {};
 
-// Function: Update
+// Function to update the destination content
 async function updateDestination(destinationName) {
-  // Check if the crew data is already cached
+  // Check if the data is already cached
   if (!destinationDataCache[destinationName]) {
     const data = await getData();
     destinationDataCache = data.destinations;
@@ -25,7 +25,7 @@ async function updateDestination(destinationName) {
 
   const destination = destinationDataCache[destinationName];
 
-  // Update
+  // Update the destination content
   if (destination) {
     destinationTitle.textContent = destination.name;
     destinationDescription.textContent = destination.description;
@@ -37,15 +37,41 @@ async function updateDestination(destinationName) {
   }
 }
 
-// Default
-const defaultDestinationButton =
-  document.querySelector(".destination-item.active") || destinationButtons[0];
-if (defaultDestinationButton) {
-  defaultDestinationButton.classList.add("active");
-  updateDestination(defaultDestinationButton.value);
+// Get sessionStorage
+function getStoredDestination() {
+  return sessionStorage.getItem("selectedDestination");
 }
 
-// Button - event
+// Set sessionStorage
+function setStoredDestination(destinationName) {
+  sessionStorage.setItem("selectedDestination", destinationName);
+}
+
+// If the page was refreshed
+const storedDestination = getStoredDestination();
+if (storedDestination) {
+  const storedDestinationButton = Array.from(destinationButtons).find(
+    (button) => button.value === storedDestination,
+  );
+  if (storedDestinationButton) {
+    storedDestinationButton.classList.add("active");
+    updateDestination(storedDestinationButton.value);
+  }
+} else {
+  const firstButton = destinationButtons[0];
+  firstButton.classList.add("active");
+  setStoredDestination(firstButton.value);
+  updateDestination(firstButton.value);
+}
+
+// Overwrite the session-storage
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    setStoredDestination(destinationButtons[0].value);
+  });
+});
+
+// Button - event listener
 destinationButtons.forEach((button) => {
   button.addEventListener("click", () => {
     destinationButtons.forEach((btn) => btn.classList.remove("active"));
@@ -53,5 +79,6 @@ destinationButtons.forEach((button) => {
 
     const selectedDestination = button.value;
     updateDestination(selectedDestination);
+    setStoredDestination(selectedDestination);
   });
 });

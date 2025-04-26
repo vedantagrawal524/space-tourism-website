@@ -33,13 +33,39 @@ async function updateCrew(crewNameValue) {
   }
 }
 
-// Default
-const defaultCrewButton =
-  document.querySelector(".crew-item.active") || crewButtons[0];
-if (defaultCrewButton) {
-  defaultCrewButton.classList.add("active");
-  updateCrew(defaultCrewButton.value);
+// Get sessionStorage
+function getStoredCrew() {
+  return sessionStorage.getItem("selectedCrew");
 }
+
+// Set sessionStorage
+function setStoredCrew(crewName) {
+  sessionStorage.setItem("selectedCrew", crewName);
+}
+
+// If the page was refreshed
+const storedCrew = getStoredCrew();
+if (storedCrew) {
+  const storedCrewButton = Array.from(crewButtons).find(
+    (button) => button.value === storedCrew,
+  );
+  if (storedCrewButton) {
+    storedCrewButton.classList.add("active");
+    updateCrew(storedCrewButton.value);
+  }
+} else {
+  const firstButton = crewButtons[0];
+  firstButton.classList.add("active");
+  setStoredCrew(firstButton.value);
+  updateCrew(firstButton.value);
+}
+
+// Overwrite the session-storage
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    setStoredCrew(crewButtons[0].value);
+  });
+});
 
 // Button - event
 crewButtons.forEach((button) => {
@@ -49,5 +75,6 @@ crewButtons.forEach((button) => {
 
     const selectedCrew = button.value;
     updateCrew(selectedCrew);
+    setStoredCrew(selectedCrew);
   });
 });

@@ -32,13 +32,39 @@ async function updateTechnology(technologyValue) {
   }
 }
 
-// Default
-const defaultTechnologyButton =
-  document.querySelector(".technology-item.active") || technologyButtons[0];
-if (defaultTechnologyButton) {
-  defaultTechnologyButton.classList.add("active");
-  updateTechnology(defaultTechnologyButton.value);
+// Get sessionStorage
+function getStoredTechnology() {
+  return sessionStorage.getItem("selectedTechnology");
 }
+
+// Set sessionStorage
+function setStoredTechnology(technologyName) {
+  sessionStorage.setItem("selectedTechnology", technologyName);
+}
+
+// If the page was refreshed
+const storedTechnology = getStoredTechnology();
+if (storedTechnology) {
+  const storedTechnologyButton = Array.from(technologyButtons).find(
+    (button) => button.value === storedTechnology,
+  );
+  if (storedTechnologyButton) {
+    storedTechnologyButton.classList.add("active");
+    updateTechnology(storedTechnologyButton.value);
+  }
+} else {
+  const firstButton = technologyButtons[0];
+  firstButton.classList.add("active");
+  setStoredTechnology(firstButton.value);
+  updateTechnology(firstButton.value);
+}
+
+// Overwrite the session-storage
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    setStoredTechnology(technologyButtons[0].value);
+  });
+});
 
 // Button - event
 technologyButtons.forEach((button) => {
@@ -48,5 +74,6 @@ technologyButtons.forEach((button) => {
 
     const selectedTechnology = button.value;
     updateTechnology(selectedTechnology);
+    setStoredTechnology(selectedTechnology);
   });
 });

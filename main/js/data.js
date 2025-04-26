@@ -16,8 +16,6 @@ const getData = async () => {
     crews: jsonResponse.crews,
     technologys: jsonResponse.technologys,
   };
-  console.log(data.destinations);
-  console.log(data.destinations.moon);
 
   return data;
 };
