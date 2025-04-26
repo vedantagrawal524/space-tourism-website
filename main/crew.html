@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,11 +17,172 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/data.js" defer></script>
+    <script src="./js/mobile-menu.js" defer></script>
   </head>
-  <body>
-    00 Home 01 Destination 02 Crew 03 Technology 02 Meet your crew Commander
-    Douglas Hurley Douglas Gerald Hurley is an American engineer, former Marine
-    Corps pilot and former NASA astronaut. He launched into space for the third
-    time as commander of Crew Dragon Demo-2.
+  <body
+    id="page"
+    class="xs:bg-[url('../assets/crew/background-crew-tablet.jpg')] min-h-screen bg-[url('../assets/crew/background-crew-mobile.jpg')] bg-cover bg-center bg-no-repeat text-base lg:bg-[url('../assets/crew/background-crew-desktop.jpg')]"
+  >
+    <header class="xs:relative px-6 py-7 lg:px-12 lg:py-16 lg:pr-0">
+      <nav
+        class="xs:justify-normal flex flex-row items-center justify-between lg:relative"
+      >
+        <img
+          src="./assets/shared/logo.svg"
+          alt="Logo"
+          class="logo h-auto w-10 place-self-center self-center lg:w-12"
+        />
+
+        <div
+          class="pointer-events-none absolute top-1/2 left-[5rem] hidden w-[90%] transform border-t-[1.5px] border-white/15 lg:inline-block"
+        ></div>
+
+        <button
+          type="button"
+          class="menu-button xs:hidden cursor-pointer bg-[url('../assets/shared/icon-hamburger.svg')] bg-cover bg-center bg-no-repeat p-2.5"
+        ></button>
+
+        <section
+          id="mobile-menu"
+          class="xs:absolute xs:translate-x-[0%] xs:flex-row xs:h-20 xs:items-center xs:justify-center xs:transition-none xs:w-fit fixed top-0 right-0 z-20 flex h-full w-[70%] translate-x-[100%] flex-col scroll-smooth bg-white/5 px-8 py-7 backdrop-blur-xl transition-all duration-400 ease-linear lg:top-[-33%] lg:right-[0rem] lg:h-20 lg:w-[40rem] lg:justify-start xl:w-[45rem]"
+        >
+          <div
+            class="pointer-events-none absolute top-1/2 left-0 hidden w-6 transform border-t-[1.5px] border-white/8 lg:inline-block"
+          ></div>
+
+          <button
+            type="button"
+            class="menu-button xs:hidden mt-2 cursor-pointer place-self-center self-end justify-self-center bg-[url('../assets/shared/icon-close.svg')] bg-center bg-no-repeat p-2.5"
+          ></button>
+
+          <ul
+            class="font-barlow-condensed xs:flex-row xs:mt-0 xs:text-[0.8rem] xs:tracking-[0.15rem] xs:gap-8 mt-20 flex w-full flex-col gap-5 text-[1.05rem] tracking-widest text-gray-200/60 uppercase lg:ml-12 lg:gap-10 lg:text-[0.83rem]"
+          >
+            <li
+              class="nav-link active xs:font-[500] relative cursor-pointer font-[500]"
+            >
+              <a href="./index.html" class="flex flex-row items-center gap-2"
+                ><span
+                  class="xs:hidden font-[600] tracking-widest text-white lg:inline-block lg:text-[0.9rem]"
+                  >00</span
+                >Home</a
+              >
+            </li>
+            <li class="nav-link relative cursor-pointer font-[500]">
+              <a
+                class="flex flex-row items-center gap-2"
+                href="./destination.html"
+                ><span
+                  class="xs:hidden font-[600] tracking-widest text-white lg:inline-block lg:text-[0.9rem]"
+                  >01</span
+                >Destination</a
+              >
+            </li>
+            <li class="nav-link relative cursor-pointer font-[500]">
+              <a class="flex flex-row items-center gap-2" href="./crew.html"
+                ><span
+                  class="xs:hidden font-[600] tracking-widest text-white lg:inline-block lg:text-[0.9rem]"
+                  >02</span
+                >Crew</a
+              >
+            </li>
+            <li class="nav-link relative cursor-pointer font-[500]">
+              <a
+                class="flex flex-row items-center gap-2"
+                href="./technology.html"
+                ><span
+                  class="xs:hidden font-[600] tracking-widest text-white lg:inline-block lg:text-[0.9rem]"
+                  >03</span
+                >Technology</a
+              >
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </header>
+
+    <main class="">
+      <section
+        class="xs:mt-6 flex h-full flex-col gap-14 px-8 py-7 pb-16 lg:mt-0 lg:gap-16 lg:px-14"
+      >
+        <h1
+          class="font-barlow-condensed ] xs:self-start xs:text-[1.5rem] flex flex-row items-center justify-center gap-3 text-[1.25rem] tracking-[0.14rem] text-gray-300 uppercase lg:ml-6 lg:font-[500]"
+        >
+          <span class="tracking-widest text-gray-400/60">02</span>
+          Pick your Crew
+        </h1>
+
+        <div
+          class="flex flex-col items-center justify-center gap-12 lg:flex-row lg:gap-40 xl:gap-60"
+        >
+          <img
+            id="crew-img"
+            src="./assets/crew/image-douglas-hurley.webp"
+            alt="Moon"
+            class="xs:w-[20rem] h-auto w-[15rem] lg:order-1 lg:w-[22rem] xl:w-[24rem]"
+          />
+          <div
+            id="crews"
+            class="flex max-w-[355px] flex-col text-center lg:max-w-[360px] lg:text-left xl:max-w-[350px]"
+          >
+            <ul
+              id="crew-list"
+              class="flex flex-row gap-6 place-self-center lg:order-1 lg:mt-24 lg:ml-1 lg:place-self-start"
+            >
+              <li>
+                <button
+                  type="button"
+                  value="0"
+                  class="crew-item active h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
+                ></button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="crew-item h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
+                  value="1"
+                ></button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="crew-item h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
+                  value="2"
+                ></button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="crew-item h-3.5 w-3.5 cursor-pointer rounded-full bg-gray-600"
+                  value="3"
+                ></button>
+              </li>
+            </ul>
+            <div id="crew-info">
+              <h1
+                id="crew-position"
+                class="font-bellefair mt-10 text-[1.6rem] text-gray-400/70 uppercase lg:mt-0"
+              >
+                Commander
+              </h1>
+              <h2
+                id="crew-name"
+                class="font-bellefair xs:text-[2.15rem] mt-1 text-[1.8rem] text-gray-50 uppercase lg:text-[2.5rem]"
+              >
+                Douglas Hurley
+              </h2>
+              <p
+                id="crew-description"
+                class="font-barlow mt-4 text-[0.8rem] font-[400] tracking-[0.02] text-gray-400 lg:text-[0.82rem] xl:text-[0.9rem] xl:leading-6"
+              >
+                Douglas Gerald Hurley is an American engineer, former Marine
+                Corps pilot and former NASA astronaut. He launched into space
+                for the third time as commander of Crew Dragon Demo-2.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

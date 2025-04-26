@@ -21,16 +21,16 @@
   </head>
   <body
     id="page"
-    class="xs:bg-[url('../assets/home/background-home-tablet.jpg')] flex min-h-screen flex-col bg-[url('../assets/home/background-home-mobile.jpg')] bg-cover bg-center bg-no-repeat text-base lg:bg-[url('../assets/home/background-home-desktop.jpg')]"
+    class="xs:bg-[url('../assets/home/background-home-tablet.jpg')] min-h-screen bg-[url('../assets/home/background-home-mobile.jpg')] bg-cover bg-center bg-no-repeat text-base lg:bg-[url('../assets/home/background-home-desktop.jpg')]"
   >
-    <header class="xs:relative px-6 py-7">
+    <header class="xs:relative px-6 py-7 lg:px-12 lg:py-16 lg:pr-0">
       <nav
         class="xs:justify-normal flex flex-row items-center justify-between lg:relative"
       >
         <img
           src="./assets/shared/logo.svg"
           alt="Logo"
-          class="logo h-auto w-10 place-self-center self-center"
+          class="logo h-auto w-10 place-self-center self-center lg:w-12"
         />
 
         <div
@@ -44,7 +44,7 @@
 
         <section
           id="mobile-menu"
-          class="xs:absolute xs:translate-x-[0%] xs:flex-row xs:h-20 xs:items-center xs:justify-center xs:transition-none fixed top-0 right-0 z-20 flex h-full w-fit translate-x-[100%] flex-col scroll-smooth bg-white/5 px-8 py-7 backdrop-blur-xl transition-all duration-400 ease-linear lg:top-[-30%] lg:right-[-1.5rem] lg:h-16 lg:w-[40rem] lg:justify-start"
+          class="xs:absolute xs:translate-x-[0%] xs:flex-row xs:h-20 xs:items-center xs:justify-center xs:transition-none xs:w-fit fixed top-0 right-0 z-20 flex h-full w-[70%] translate-x-[100%] flex-col scroll-smooth bg-white/5 px-8 py-7 backdrop-blur-xl transition-all duration-400 ease-linear lg:top-[-33%] lg:right-[0rem] lg:h-20 lg:w-[40rem] lg:justify-start xl:w-[45rem]"
         >
           <div
             class="pointer-events-none absolute top-1/2 left-0 hidden w-6 transform border-t-[1.5px] border-white/8 lg:inline-block"
@@ -56,14 +56,14 @@
           ></button>
 
           <ul
-            class="font-barlow-condensed xs:flex-row xs:mt-0 xs:text-[0.8rem] xs:tracking-[0.15rem] xs:gap-8 mt-20 flex w-full flex-col gap-5 text-[1.05rem] tracking-widest text-gray-300 uppercase lg:ml-12 lg:gap-10 lg:text-[0.83rem]"
+            class="font-barlow-condensed xs:flex-row xs:mt-0 xs:text-[0.8rem] xs:tracking-[0.15rem] xs:gap-8 mt-20 flex w-full flex-col gap-5 text-[1.05rem] tracking-widest text-gray-200/60 uppercase lg:ml-12 lg:gap-10 lg:text-[0.83rem]"
           >
             <li
               class="nav-link active xs:font-[500] relative cursor-pointer font-[500]"
             >
               <a href="#" class="flex flex-row items-center gap-2"
                 ><span
-                  class="xs:hidden font-[600] tracking-widest text-gray-50 lg:inline-block lg:text-[0.9rem]"
+                  class="xs:hidden font-[600] tracking-widest text-white lg:inline-block lg:text-[0.9rem]"
                   >00</span
                 >Home</a
               >
@@ -73,7 +73,7 @@
                 class="flex flex-row items-center gap-2"
                 href="./destination.html"
                 ><span
-                  class="xs:hidden font-[600] tracking-widest text-gray-50 lg:inline-block lg:text-[0.9rem]"
+                  class="xs:hidden font-[600] tracking-widest text-white lg:inline-block lg:text-[0.9rem]"
                   >01</span
                 >Destination</a
               >
@@ -81,7 +81,7 @@
             <li class="nav-link relative cursor-pointer font-[500]">
               <a class="flex flex-row items-center gap-2" href="./crew.html"
                 ><span
-                  class="xs:hidden font-[600] tracking-widest text-gray-50 lg:inline-block lg:text-[0.9rem]"
+                  class="xs:hidden font-[600] tracking-widest text-white lg:inline-block lg:text-[0.9rem]"
                   >02</span
                 >Crew</a
               >
@@ -91,7 +91,7 @@
                 class="flex flex-row items-center gap-2"
                 href="./technology.html"
                 ><span
-                  class="xs:hidden font-[600] tracking-widest text-gray-50 lg:inline-block lg:text-[0.9rem]"
+                  class="xs:hidden font-[600] tracking-widest text-white lg:inline-block lg:text-[0.9rem]"
                   >03</span
                 >Technology</a
               >
@@ -101,23 +101,25 @@
       </nav>
     </header>
 
-    <main class="flex items-center justify-center lg:self-center">
+    <main class="">
       <section
-        class="xs:mt-10 flex flex-col items-center justify-between gap-16 px-6 py-7 pb-9 lg:mt-[20%] lg:flex-row lg:justify-around lg:gap-36"
+        class="xs:mt-10 flex flex-col items-center gap-16 px-6 py-7 pb-9 lg:flex-row lg:justify-center lg:gap-48 lg:px-12 xl:gap-96"
       >
-        <div class="max-w-[355px] text-center lg:max-w-[314px] lg:text-left">
+        <div
+          class="max-w-[355px] text-center lg:max-w-[314px] lg:text-left xl:max-w-[350px]"
+        >
           <p
-            class="font-barlow-condensed text-[0.9rem] tracking-[0.13rem] text-gray-400 uppercase lg:ml-0.5 lg:text-[1.1rem] lg:font-[500]"
+            class="font-barlow-condensed text-[0.9rem] tracking-[0.13rem] text-gray-400 uppercase lg:ml-0.5 lg:text-[1.18rem] lg:font-[500] xl:text-[1.3rem]"
           >
             So, you want to travel to
           </p>
           <h1
-            class="font-bellefair xs:text-[6.5rem] xs:leading-24 mt-6 text-[5rem] leading-20 text-gray-50 uppercase"
+            class="font-bellefair xs:text-[6.5rem] xs:leading-24 mt-6 text-[5rem] leading-20 text-gray-50 uppercase lg:text-[6.8rem] xl:text-[8rem]"
           >
             Space
           </h1>
           <p
-            class="font-barlow mt-5 text-[0.8rem] font-[400] tracking-[0.02] text-gray-400"
+            class="font-barlow mt-5 text-[0.8rem] font-[400] tracking-[0.02] text-gray-400 lg:text-[0.82rem] xl:text-[0.9rem] xl:leading-6"
           >
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
@@ -128,7 +130,7 @@
 
         <a
           href="./destination.html"
-          class="font-bellefair relative flex h-40 w-40 items-center justify-center rounded-full bg-white text-[1.5rem] font-[500] text-gray-950 uppercase transition-all duration-200 ease-in-out after:absolute after:h-60 after:w-60 after:rounded-full after:bg-white/10 after:opacity-0 after:transition-opacity after:duration-200 after:ease-in-out hover:after:opacity-100"
+          class="font-bellefair relative flex h-40 w-40 items-center justify-center rounded-full bg-white text-[1.5rem] font-[500] text-gray-950 uppercase transition-all duration-200 ease-in-out after:absolute after:h-60 after:w-60 after:rounded-full after:bg-white/10 after:opacity-0 after:blur-lg after:transition-opacity after:duration-200 after:ease-in-out hover:after:opacity-100 lg:h-50 lg:w-50 lg:after:h-90 lg:after:w-90 xl:h-60 xl:w-60 xl:after:h-100 xl:after:w-100"
           >Explore</a
         >
       </section>
